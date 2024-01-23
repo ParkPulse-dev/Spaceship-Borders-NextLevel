@@ -1,6 +1,6 @@
 # Spaceship-Borders-NextLevel
 
-Game Process implement assignment, Game Development course.
+Game process implementation assignment, Game Development course.
 
 ### Description
 
