@@ -16,7 +16,7 @@ public class ScreenWrapColl : MonoBehaviour
         // Get the width of the object
         objectWidth = GetComponent<SpriteRenderer>().bounds.size.x;
     }
-    
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the other collider is a trigger wall

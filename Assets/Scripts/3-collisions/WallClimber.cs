@@ -22,7 +22,7 @@ public class WallClimber : MonoBehaviour
     {
         // Set the flag to indicate that the object is currently colliding
         isColliding = true;
-        
+
         // Get the first contact point from the collision
         Vector2 collisionPoint = collision.contacts[0].point;
 
@@ -41,10 +41,10 @@ public class WallClimber : MonoBehaviour
     {
         // Determine the direction vector from the object's position to the collision point
         Vector2 collisionDirection = collisionPoint - (Vector2)transform.position;
-    
+
         // Calculate the dot product between the normalized collision direction and the normalized speed vector
         float dotProduct = Vector2.Dot(collisionDirection.normalized, speed.normalized);
-    
+
         // If the dot product is positive, it means the collision is happening from the front
         if (dotProduct > 0)
         {
