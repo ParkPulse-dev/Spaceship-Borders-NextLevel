@@ -73,7 +73,6 @@ public class TimedSpawnerRandom : MonoBehaviour
                     }
                 }
             }
-
             yield return null;
         }
     }
