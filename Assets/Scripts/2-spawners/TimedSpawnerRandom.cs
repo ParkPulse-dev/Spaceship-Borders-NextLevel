@@ -5,7 +5,6 @@ public class TimedSpawnerRandom : MonoBehaviour
 {
     private const string PlayerSpaceshipTag = "Player";
     private const string toNextLevelTag = "NextLevel";
-
     [SerializeField] int maxScoreThreshold = 50;
     [SerializeField] Mover prefabToSpawn;
     [SerializeField] Vector3 velocityOfSpawnedObject;
