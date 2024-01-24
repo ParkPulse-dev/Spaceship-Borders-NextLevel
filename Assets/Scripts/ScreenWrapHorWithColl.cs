@@ -10,22 +10,25 @@ public class ScreenWrapColl : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get the Rigidbody2D component attached to this GameObject
+        // Get the Rigidbody2D component attached to this object
         myRigidBody = GetComponent<Rigidbody2D>();
 
-        // Get the width of the object (assuming it's a 2D object)
+        // Get the width of the object
         objectWidth = GetComponent<SpriteRenderer>().bounds.size.x;
     }
-
-    // OnTriggerEnter2D is called when the Collider2D other enters the trigger
+    
     private void OnTriggerEnter2D(Collider2D other)
     {
         // Check if the other collider is a trigger wall
         if (other.CompareTag("ScreenWrapTrigger"))
         {
-            // Move the object to the corresponding position on the opposite side
-            Vector2 newPosition = new Vector2(-transform.position.x + Mathf.Sign(transform.position.x) * wrapOffset, transform.position.y);
-            transform.position = newPosition;
+            WrapObject();
         }
+    }
+    private void WrapObject()
+    {
+        // Move the object to the corresponding position on the opposite side
+        float newX = -transform.position.x + Mathf.Sign(transform.position.x) * wrapOffset;
+        transform.position = new Vector2(newX, transform.position.y);
     }
 }
